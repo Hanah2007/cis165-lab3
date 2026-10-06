@@ -113,8 +113,24 @@ I stored each calculated result in a variable before displaying it. This keeps t
 
 ## Testing
 
+## Testing
+
 Before each test, I calculated the expected results independently and then compared them with the program output.
 
-| Program/test  | Values or pattern checked | Expected result before running                         | Actual output | Match or correction |
-| ------------- | ------------------------- | ------------------------------------------------------ | ------------- | ------------------- |
-| `diamond.cpp` | Seven required lines      | Three spaces/one star, two spaces/three stars, one spa |               |                     |
+| Program/test | Values or pattern checked | Expected result before running | Actual output | Match or correction |
+|---|---|---|---|---|
+| `diamond.cpp` | Seven required lines | Three spaces/one star, two spaces/three stars, one space/five stars, seven stars, then the reverse | The seven lines matched the required pattern with the correct spaces and asterisks | Match |
+| `game_time.cpp` — assigned | Level 1 = 78, Level 2 = 144 | Level 1 = 1 hour, 18 minutes; Level 2 = 2 hours, 24 minutes; Difference = 1 hour, 6 minutes | Level 1: 1 hour(s) and 18 minute(s); Level 2: 2 hour(s) and 24 minute(s); Difference: 1 hour(s) and 6 minute(s) | Match |
+| `game_time.cpp` — changed | Level 1 = 95, Level 2 = 217 | Level 1 = 1 hour, 35 minutes; Level 2 = 3 hours, 37 minutes; Difference = 2 hours, 2 minutes | Level 1: 1 hour(s) and 35 minute(s); Level 2: 3 hour(s) and 37 minute(s); Difference: 2 hour(s) and 2 minute(s) | Match |
+
+The changed-value test was useful because both levels had nonzero remainders. It confirmed that the integer division and remainder calculations worked with values other than the assigned values.
+
+The programs were then restored to the assigned values of 78 and 144. Both programs were run again as final checks before submission.
+
+## Final Assigned Values
+
+The final version of `game_time.cpp` uses:
+
+```cpp
+int level_one_minutes = 78;
+int level_two_minutes = 144;
