@@ -113,7 +113,6 @@ I stored each calculated result in a variable before displaying it. This keeps t
 
 ## Testing
 
-## Testing
 
 Before each test, I calculated the expected results independently and then compared them with the program output.
 
@@ -134,3 +133,9 @@ The final version of `game_time.cpp` uses:
 ```cpp
 int level_one_minutes = 78;
 int level_two_minutes = 144;
+The final assigned-value output was:
+
+```text
+Level 1: 1 hour(s) and 18 minute(s)
+Level 2: 2 hour(s) and 24 minute(s)
+Difference: 1 hour(s) and 6 minute(s)
